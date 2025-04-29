@@ -1,0 +1,26 @@
+{
+  "name": "CDDA DevContainer",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {}
+  },
+  "workspaceFolder": "/workspace",
+  "runArgs": [
+    "-v", "${localWorkspaceFolder}/saves:/workspace/saves",
+    "-v", "${localWorkspaceFolder}/src:/workspace/src"
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "bash"
+  },
+  "postCreateCommand": "sudo chown -R vscode:vscode /workspace && sudo chmod -R u+rw /workspace && if [ ! -d src ]; then echo '⚠️  WARNING: src/ folder is missing. Clone CDDA source code into src/ before building.'; fi",
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.vscode,target=/workspace/.vscode,type=bind"
+  ],
+  "extensions": [
+    "ms-vscode.cpptools",
+    "ms-vscode.cmake-tools",
+    "ms-vscode.makefile-tools"
+  ]
+}

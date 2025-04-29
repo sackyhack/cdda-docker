@@ -1,0 +1,44 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Cataclysm-DDA (Tiles + Sound)",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "TILES=1",
+        "SOUND=1",
+        "RELEASE=1",
+        "LINTJSON=0",
+        "-j$(nproc)"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "Build Cataclysm-DDA (Terminal Only)",
+      "type": "shell",
+      "command": "make",
+      "args": [
+        "RELEASE=1",
+        "LINTJSON=0",
+        "-j$(nproc)"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/src"
+      },
+      "group": "build",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    }
+  ]
+}

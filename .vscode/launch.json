@@ -1,0 +1,31 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Cataclysm-DDA (Tiles)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/cataclysm-tiles",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "Launch Cataclysm-DDA (Terminal Only)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/cataclysm",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}
