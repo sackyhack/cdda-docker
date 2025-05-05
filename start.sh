@@ -17,4 +17,4 @@ sleep 2
 
 # Launch Cataclysm (tiles)
 cd /workspace/src
-./cataclysm-tiles --basepath ./ --userdir /workspace/saves
+./cataclysm-tlg-tiles --basepath ./ --userdir /workspace/saves

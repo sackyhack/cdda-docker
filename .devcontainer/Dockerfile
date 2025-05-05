@@ -62,4 +62,4 @@ RUN chmod 755 /usr/local/bin/start.sh
 
 USER vscode
 
-CMD ["/usr/local/bin/start.sh"]
+CMD ["/bin/bash"]
